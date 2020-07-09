@@ -16,6 +16,17 @@
     {% endif %}
     <h1><a href="/">My Posts</a></h1>
 </div>
+<div class="sidenav">
+    <ul class="sidebar-nav">
+        {% if user.is_authenticated %}
+            <li>User: {{ user.get_username }}</li>
+            <li><a href="{% url 'logout' %}?next={{request.path}}">Logout</a></li>
+        {% else %}
+            <li><h4>You're not signed in!</h4></li>
+            <li><a href="{% url 'login' %}?next={{request.path}}">Login</a></li>
+        {% endif %}
+    </ul>
+</div>
 <div class="content container">
     <div class="row">
         <div class="col-md-8">
