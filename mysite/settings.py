@@ -25,7 +25,7 @@ SECRET_KEY = '@6%(xoyilksoboy#!w4#ywmj2#=3+j$ep_ih$=7@t8tvje1zjp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aladdinred.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition

@@ -19,7 +19,7 @@
 <div class="sidenav">
     <ul class="sidebar-nav">
         {% if user.is_authenticated %}
-            <li>User: {{ user.get_username }}</li>
+        <li><a href=""><h4>User: {{ user.get_username }}</h4></a></li>
             <li><a href="{% url 'logout' %}?next={{request.path}}">Logout</a></li>
         {% else %}
             <li><h4>You're not signed in!</h4></li>
